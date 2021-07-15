@@ -7,11 +7,13 @@ type Props = {
 
 export default class CenteredWrapper extends Component<Props> {
   style = {
-    height: this.props.height || "100vh",
+    minHeight: this.props.height || "100vh",
     width: this.props.width || "100vw",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
+    paddingTop: '32px',
+    paddingBottom: '32px'
   };
   render() {
     return <div style={this.style}>{this.props.children}</div>;

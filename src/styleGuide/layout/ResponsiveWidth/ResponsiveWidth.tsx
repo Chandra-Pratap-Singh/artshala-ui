@@ -4,7 +4,7 @@ import React from "react";
 type Props = {
   size?: "sm" | "md" | "lg";
 };
-// props.size === "lg" ? "80%" : props.size === "md" ? "60%" : "600px";
+
 
 const useStyle = makeStyles((theme) =>
   createStyles({
@@ -32,7 +32,7 @@ const useStyle = makeStyles((theme) =>
   })
 );
 
-// props.size === "lg" ? "60%" : props.size === "md" ? "1280px" : "600px",
+
 const ResponsiveWidth: React.FC<Props> = ({ children, size = "lg" }) => {
   const classes = useStyle({ size });
   return <div className={classes.root}>{children}</div>;
